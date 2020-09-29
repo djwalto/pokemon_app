@@ -1,0 +1,7 @@
+.pokemonListItem {
+    display: inline-block;
+}
+
+.pokemonListItem img {
+    width: 200px;
+}

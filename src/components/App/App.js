@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
+import PokemonList from './PokemonList/PokemonList';
 
 class App extends Component {
 
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Pokemon!</h1>
+        <PokemonList />
       </div>
     );
   }
