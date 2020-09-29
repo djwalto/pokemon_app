@@ -1,8 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const pool = require('../modules/pool');
 
 // GET ALL POKEMON
-router.get();
+router.get('/', (req, res) => {
+    const queryString = `SELECT * FROM "pokemon"`;
+
+    pool
+        .query(queryString)
+        .then((response) => {
+            res.send(response.rows);
+        }).catch((err) => {
+            console.log(500);
+        })
+});
 
 // GET ALL TYPES
 
