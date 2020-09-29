@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PokemonListItem from '../../PokemonListItem/PokemonListItem';
+import PokemonListItem from '../PokemonListItem/PokemonListItem';
 import './PokemonList.css';
 
 class PokemonList extends Component {
@@ -10,7 +10,7 @@ class PokemonList extends Component {
 
         const pokemonListHtmlArray = this.props.store.pokemonReducer.map((item, index) => {
             return (
-                <PokemonListItem pokemon={item} />
+                <PokemonListItem pokemon={item} clickPokemon={this.props.clickPokemon} />
             )
         })
         return (

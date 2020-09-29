@@ -5,10 +5,11 @@ import './PokemonListItem.css';
 class PokemonListItem extends Component {
 
 
+
     render() {
         return (
 
-            <div className="pokemonListItem">
+            <div className="pokemonListItem" onClick={this.props.clickPokemon(this.props.pokemon.id)}>
                 <img src={this.props.pokemon.images} />
                 <h4>{this.props.pokemon.name}</h4>
             </div>
