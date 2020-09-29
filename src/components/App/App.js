@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import { connect } from 'react-redux';
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.dispatch({ type: 'GET_POKEMON' })
+  }
+
   render() {
     return (
       <div className="App">
@@ -11,4 +17,6 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStoreToProps = (store) => ({ store });
+
+export default connect(mapStoreToProps)(App);
