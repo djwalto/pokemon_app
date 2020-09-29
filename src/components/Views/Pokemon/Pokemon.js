@@ -29,8 +29,16 @@ class Pokemon extends Component {
         )
     }
 
+    onBackClick = (event) => {
+        this.props.history.push('/');
+    }
+
     render() {
         return <div className="currentPokemon">
+            <div>
+                <button onClick={this.onBackClick} >BACK</button>
+            </div>
+
             <img src={this.state.pokemon.images} />
             <h1>{this.state.pokemon.name}</h1>
             <h5>{this.state.pokemon.description}</h5>

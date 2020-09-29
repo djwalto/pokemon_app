@@ -1,3 +1,8 @@
 .currentPokemon img{
     width: 200px;
+    margin-top: 25px;
+}
+
+.currentPokemon h5{
+    padding: 0 25%;
 }
